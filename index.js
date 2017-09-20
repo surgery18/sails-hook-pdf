@@ -86,8 +86,12 @@ module.exports = function PDF(sails){
           });
         }]
 
+      },
+      // ASYNC callback
+      function (err, results) {
+        if (err) return cb(err);
+        cb(null, results.genPdf);
       });
-    },
-
+    }
   };
 };
