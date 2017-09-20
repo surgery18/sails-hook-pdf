@@ -10,7 +10,7 @@ Pdf hook for [Sails JS](http://sailsjs.org), using [html-pdf](https://github.com
 
 ### Usage
 
-`sails.hooks.email.pdf(template, data, options, cb)`
+`sails.hooks.pdf.make(template, data, options, cb)`
 
 Parameter      | Type                | Details
 -------------- | ------------------- |:---------------------------------
