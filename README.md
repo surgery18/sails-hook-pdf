@@ -2,7 +2,7 @@
 
 [![Dependency Status](https://david-dm.org/surgery18/sails-hook-pdf.svg)](https://david-dm.org/surgery18/sails-hook-pdf)
 
-Pdf hook for [Sails JS](http://sailsjs.org), using [html-pdf](https://github.com/marcbachmann/node-html-pdf/README.md)
+Pdf hook for [Sails JS](http://sailsjs.org), using [html-pdf](https://github.com/marcbachmann/node-html-pdf)
 
 ### Installation
 
