@@ -16,7 +16,7 @@ Parameter      | Type                | Details
 -------------- | ------------------- |:---------------------------------
 template       | ((string))          | Relative path from `templateDir` (see "Configuration" below) to a folder containing email templates.
 data           | ((object))          | Data to use to replace template tokens
-options        | ((object))          | Email sending options (see [Nodemailer docs](https://github.com/andris9/Nodemailer/blob/v1.3.4/README.md#e-mail-message-fields))
+options        | ((object))          | Pdf options (right now just output)
 cb             | ((function))        | Callback to be run after the pdf is created (or if an error occurs). It will contain the path to the file.
 
 ### Templates
