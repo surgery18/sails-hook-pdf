@@ -54,6 +54,10 @@ module.exports = function PDF(sails){
 
     make: function (template, data, options, cb) {
       data = data || {};
+
+      // Turn off layouts by default
+      if (typeof data.layout === 'undefined') data.layout = false;
+
       var templateDir = sails.config[self.configKey].templateDir;
       var templatePath = path.join(templateDir, template);
       var defaults = {
