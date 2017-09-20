@@ -28,7 +28,17 @@ Templates are generated using your configured Sails [View Engine](http://sailsjs
 Given the following **pdf.ejs** file contained in the folder **views/pdfTemplates/testPdf**:
 
 ```
-<p>Hello <%=a%>!</p>
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>TEST</title>
+  </head>
+  <body>
+    <div>
+      <p>Hello <%=a%>!</p>
+    </div>
+  </body>
+</html>
 ```
 
 In your app you would run the following command.
