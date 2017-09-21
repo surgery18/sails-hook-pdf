@@ -82,9 +82,9 @@ module.exports = function PDF(sails){
             });
           }
         ]).then(function(res) {
-          return (cb ? cb(null, res) : resolve(res));
+          return (cb != null ? cb(null, result) : resolve(result));
         }).catch(function(error) {
-          return (cb ? cb(error) : reject(error));
+          return (cb != null ? cb(error) : reject(error));
         });
       });
     }
