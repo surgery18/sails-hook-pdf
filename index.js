@@ -84,7 +84,6 @@ module.exports = function PDF(sails){
             if (err) {
               next(err);
             } else {
-              console.log(res);
               next(null, res);
             }
           });
