@@ -35,7 +35,7 @@ Templates are generated using your configured Sails [View Engine](http://sailsjs
 
 Given the following **pdf.ejs** file contained in the folder **views/pdfTemplates/testPdf**:
 
-```
+```html
 <!DOCTYPE HTML>
 <html>
   <head>
@@ -51,7 +51,7 @@ Given the following **pdf.ejs** file contained in the folder **views/pdfTemplate
 
 In your app you would run the following command.
 
-```
+```javascript
 sails.hooks.pdf.make(
   "testPdf",
   {
@@ -61,9 +61,25 @@ sails.hooks.pdf.make(
     output: 'assets/pdfs/mypdf.pdf'
   },
   function(err, result) {
-    console.log(err || "It worked!");
+    console.log(err, result);
   }
 );
+```
+
+Or
+
+```javascript
+sails.hooks.pdf.make("testPdf",
+{
+  a: "Bob Dole",
+},
+{
+  output: 'assets/pdfs/mypdf.pdf'
+}).then(function(result) {
+  console.log(result);
+}).catch(function(error) {
+  console.log(error);
+});
 ```
 
 will result in creating the pdf.
