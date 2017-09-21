@@ -52,7 +52,7 @@ sails.hooks.pdf.make(
   {
     output: 'assets/pdfs/mypdf.pdf'
   },
-  function(err) {
+  function(err, result) {
     console.log(err || "It worked!");
   }
 );
