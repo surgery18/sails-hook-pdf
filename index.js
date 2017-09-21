@@ -85,10 +85,10 @@ module.exports = function PDF(sails){
         function(error, result) {
           if (error) {
             if (cb) cb(error);
-            reject(data);
+            reject(error);
           } else {
             if (cb) cb(null, result);
-            resolve(data);
+            resolve(result);
           }
         });
       });
