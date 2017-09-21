@@ -14,10 +14,10 @@ Pdf hook for [Sails JS](http://sailsjs.org), using [html-pdf](https://github.com
 
 Parameter      | Type                | Details
 -------------- | ------------------- |:---------------------------------
-template       | ((string))          | Relative path from `templateDir` (see "Configuration" below) to a folder containing pdf templates.
-data           | ((object))          | Data to use to replace template tokens
-options        | ((object))          | Pdf options (right now just output)
-cb             | ((function))        | Callback to be run after the pdf is created (or if an error occurs). It will contain the path to the file.
+template       | string          | Relative path from `templateDir` (see "Configuration" below) to a folder containing pdf templates.
+data           | object          | Data to use to replace template tokens
+options        | object          | Pdf options (right now just output)
+cb             | function        | Callback to be run after the pdf is created (or if an error occurs). It will contain the path to the file.
 
 ### Templates
 
