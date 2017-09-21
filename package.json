@@ -1,6 +1,6 @@
 {
   "name": "sails-hook-pdf",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A sails module to make pdf generation easy.",
   "main": "index.js",
   "dependencies": {

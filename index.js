@@ -81,10 +81,12 @@ module.exports = function PDF(sails){
               }
             });
           }
-        ]).then(function(res) {
-          return (cb != null ? cb(null, result) : resolve(result));
+        ]).then(function(result) {
+          if (cb) cb(null, result);
+          resolve(data);
         }).catch(function(error) {
-          return (cb != null ? cb(error) : reject(error));
+          if (cb) cb(error);
+          reject(error);
         });
       });
     }
