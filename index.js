@@ -1,7 +1,7 @@
 var ejs = require('ejs');
 var fs = require('fs');
 var path = require('path');
-var async = require('promise-async');
+var async = require('async');
 var _ = require('lodash');
 var pdf = require('html-pdf');
 
@@ -81,12 +81,15 @@ module.exports = function PDF(sails){
               }
             });
           }
-        ]).then(function(result) {
-          if (cb) cb(null, result);
-          resolve(data);
-        }).catch(function(error) {
-          if (cb) cb(error);
-          reject(error);
+        ],
+        function(error, result) {
+          if (error) {
+            if (cb) cb(error);
+            reject(data);
+          } else {
+            if (cb) cb(null, result);
+            resolve(data);
+          }
         });
       });
     }
